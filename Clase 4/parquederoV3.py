@@ -12,14 +12,39 @@
 # #
  
 # Definicion de la clase Vehiculo
+class Marca:
+    id: int
+    nombre: str
+
+    def __init__(self, id, nombre):
+        self.id = id
+        self.nombre = nombre
+
+    def __str__(self):
+        return f"Marca: id={self.id}  nombre={self.nombre} "
+
+
+class Modelo:
+    id: int
+    nombre: str
+    marca: Marca
+
+    def __init__(self, id, nombre, marcaSelec):
+        self.id = id
+        self.nombre = nombre
+        self.marca = Marca(marcaSelec.id, marcaSelec.nombre)
+
+    def __str__(self):
+        return f"Modelo: id={self.id}  nombre={self.nombre}  marca={self.marca.nombre} "
+   
+
 class Vehiculo:    
     id: int
-    idmodelo: int
     placa: str
     color: str
     velocidad: int
     observaciones: str
-    
+    modelo: Modelo
     #Set Metodo
     def __init__(self, placa, color, observaciones, idmodelo):
         self.placa = placa
@@ -32,30 +57,7 @@ class Vehiculo:
     def __str__(self):
         return f"Vehiculo (placa={self.placa}, color={self.color} y tiene observaciones={self.observaciones})"
     
-class Marca:
-    id: int
-    nombre: str
-
-    def __init__(self, id, nombre):
-        self.id = id
-        self.nombre = nombre
-
-    def __str__(self):
-        return f"Marca: id={self.id}  nombre={self.nombre} "
-
-class Modelo:
-    id: int
-    idmarca: int
-    nombre: str
-
-    def __init__(self, id, nombre, idmarca):
-        self.id = id
-        self.nombre = nombre
-        self.idmarca = idmarca
-
-    def __str__(self):
-        return f"Modelo: nombre={self.id}  nombre={self.nombre}  marca={self.idmarca} "
-    
+ 
 # Crear un vehiculo
 
 # Condition of the while loop
@@ -93,9 +95,13 @@ while opcion < 7 :
             nombreModelo = input("Nombre del Modelo: ")        
             idmodelo = len(modelos) + 1
             
+            for item in marcas:
+                if item.id == idmarca:
+                    marcaSeleccionada = item
+                    break
 
 
-            modelo = Modelo(idmodelo, nombreModelo, idmarca)
+            modelo = Modelo(idmodelo, nombreModelo, marcaSeleccionada)
             modelos.append(modelo)
         else:
             print("No hay marcas registradas")
@@ -103,9 +109,6 @@ while opcion < 7 :
     elif opcion == 4:        
         for item2 in modelos:
             print(item2)
-            for item3 in marcas:
-                if item2.idmarca == item3.id:
-                    print(item3)
 
     if opcion == 5:
         placa = input("Ingrese la placa del vehiculo: ")
