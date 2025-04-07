@@ -6,11 +6,11 @@
 # Hora de salida
 # Fecha de salida
 # Observaciones (Vehiculo)
-# Marca (Vehiculo)
-# Modelo (Vehiculo)
+# Marca (Vehiculo) = id, nombre,
+# Modelo (Vehiculo) = id, nombre, marca
 # Color (Vehiculo)
 # #
-
+ 
 # Definicion de la clase Vehiculo
 class Vehiculo:    
     placa: str
