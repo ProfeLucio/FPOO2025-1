@@ -24,3 +24,25 @@ mario.mover(1, 0)
 mostrarTodo()
 mario.mover(1, 0)
 mostrarTodo()
+
+
+accion = 0
+while accion < 5:
+    print("1. Adelante")
+    print("2. Atras")
+    print("3. Subir")
+    print("4. Bajar")
+    accion = int(input("Ingrese la accion: "))
+    
+    if accion == 1:
+       mario.mover(1, 0)
+       mostrarTodo()
+    elif accion == 2:
+       mario.mover(-1, 0)
+       mostrarTodo()
+    elif accion == 3:
+       mario.mover(0, 1)
+       mostrarTodo()
+    elif accion == 4:
+        mario.mover(0, -1)
+        mostrarTodo()
