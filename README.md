@@ -1,8 +1,7 @@
 # ¡Desafío de Programación Avanzado: Menú Interactivo y Poderes Dinámicos en Mario Bros!
 
-¡Hola de nuevo, futuros arquitectos de videojuegos!
 
-Basándonos en el excelente trabajo que ya han realizado con la estructura de personajes y poderes, ¡ahora vamos a llevar este proyecto de Mario Bros al siguiente nivel!
+Basándonos en el trabajo que ya realizamos con la estructura de personajes y poderes, ¡ahora vamos a llevar este proyecto de Mario Bros al siguiente nivel!
 
 **El Nuevo Reto:**
 
@@ -43,5 +42,4 @@ Tu misión ahora es expandir la interactividad del juego y la gestión de los po
 * Generación dinámica de objetos y gestión de listas.
 * Implementación de lógica de detección de colisiones entre objetos.
 * Integración de las funcionalidades existentes (`mover()`, `recogerPoder()`) en un flujo de juego más complejo.
-
-¡Este es un paso crucial para convertir su proyecto en un juego de Mario Bros funcional e interactivo! ¡Adelante y demuestren su dominio de la programación orientada a objetos!
+!
