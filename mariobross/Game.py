@@ -9,6 +9,8 @@ PASO_X      = 10
 JUMP_HEIGHT = 100
 JUMP_STEPS  = 10
 
+ASSETS_DIR = "assets/images/"
+
 class Game:
     def __init__(self):
         # --- Ventana y menú ---
@@ -36,13 +38,13 @@ class Game:
         self.root.bind("<Key>", self.on_key)
 
     def load_images(self):
-        inicial   = Image.open("1.png").resize((50,50))
-        inicialGrande = Image.open("1.png").resize((60,60))
-        base_i = Image.open("1i.png").resize((50,50))
-        izq    = Image.open("2i.png").resize((50,50))
-        der    = Image.open("2.png").resize((50,50))
-        hongoVerde = Image.open("assets/images/hongoVerde.png").resize((40, 40))
-        hongoRojo = Image.open("assets/images/hongoRojo.png").resize((40, 40))
+        inicial   = Image.open(ASSETS_DIR+"1.png").resize((50,50))
+        inicialGrande = Image.open(ASSETS_DIR+"1.png").resize((60,60))
+        base_i = Image.open(ASSETS_DIR+"1i.png").resize((50,50))
+        izq    = Image.open(ASSETS_DIR+"2i.png").resize((50,50))
+        der    = Image.open(ASSETS_DIR+"2.png").resize((50,50))
+        hongoVerde = Image.open(ASSETS_DIR+"hongoVerde.png").resize((40, 40))
+        hongoRojo = Image.open(ASSETS_DIR+"hongoRojo.png").resize((40, 40))
 
         
         self.imgs["inicial"]  = ImageTk.PhotoImage(inicial)
